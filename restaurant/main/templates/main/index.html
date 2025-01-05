@@ -1,0 +1,322 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <title>TARU Restaurant</title>
+</head>
+<body>
+    <div id="main" class="header">
+        <div class="container">
+            <div class="header-line">
+                <div class="header-logo">
+                    <img src="{% static 'main/images/LOGO.png' %}" alt="logo">
+                </div>
+
+                <div class="nav">
+                    <a class="nav-item" href="#main"> Main </a>
+                    <a class="nav-item" href="#menu"> Menu </a>
+                    <a class="nav-item" href="#about"> About us</a>
+                </div>
+                <div class="cart">
+                    <a href="{% url 'order' %}">
+                        <img class="cart-img" src="{% static 'main/images/cart.png' %}" alt="cart">
+                    </a>
+                </div>
+
+                <div class="phone">
+                    <div class="phone-holder">
+                        <div class="phone-img">
+                            <img src="{% static 'main/images/phone.png' %}" alt="phone">
+                        </div>
+
+                        <div class="num"> +48-111-222-333</div>
+
+
+                    </div>
+                    <div class="phone-text">
+                            support service
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <a class="button" href="{% url 'order_table' %}"> Order table </a>
+                </div>
+            </div>
+            <div class="header-down">
+                <div class="header-title">
+                    TARU RESTAURANT
+
+                    <div class="header-bth">
+                        <a href="#menu" class="header-button"> View Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="container">
+            <div class="cards-holder">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="{% static 'main/images/card.png' %}" alt="card">
+                    </div>
+
+                    <div class="card-title">
+                        Magical  <span>Atmosphere</span>
+                    </div>
+
+                    <div class="card-desc">
+                        Our place has a magical atmosphere
+                        filled with delicious flavors
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="{% static 'main/images/card.png' %}" alt="card">
+                    </div>
+
+                    <div class="card-title">
+                        Best Quality <span> Food</span>
+                    </div>
+
+                    <div class="card-desc">
+                        The quality of our food is excellent!
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img class="card-img" src="{% static 'main/images/card.png' %}" alt="card">
+                    </div>
+
+                    <div class="card-title">
+                        Inexpensive <span> Food </span>
+                    </div>
+
+                    <div class="card-desc">
+                        The cost of our food
+                        depends solely on the amount
+                        quantity. Quality
+                        is always at its best!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="history">
+        <div class="container">
+            <div class="history-holder">
+                <div class="history-info">
+                    <div class="history-title">
+                        About <span>Us </span>
+                    </div>
+                    <div class="history-desc">
+                        Like any other distinctive place, we have our own special history.
+                        The idea for the restaurant came to the founders unexpectedly.
+                        During a walk through the forest, the creator of our restaurant got stuck hundreds of
+                        kilometers away from the nearest settlement.
+                        Far away from civilization and communication, they had to set up a rudimentary
+                        life for a while, to find and cook their own food.
+                    </div>
+            </div>
+
+                <div class="history-images">
+                    <img class="image-1" src="{% static 'main/images/1.png' %}" alt="1">
+                    <img class="image-2" src="{% static 'main/images/2.png' %}" alt="2">
+                    <img class="image-3" src="{% static 'main/images/3.png' %}" alt="3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="black-block">
+        <div class="container">
+            <div class="black-holder">
+                <div class="left">
+                    <div class="left-title">
+                        Celebrate at one
+                        of the<br> finest restaurants.
+                    </div>
+                    <div class="left-text">
+                        This month only, business lunch from 250$.
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right-button">
+                        <a class="right-btn" href="{% url 'order_table' %}"> Order table </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu" class="dishes">
+        <div class="container">
+            <div class='dishes-title'>
+                Our <span>Menu</span>
+            </div>
+            <div class='burgers'>
+                <div class='burgers-image'>
+                    <img class="pizza" src="{% static 'main/images/pizza.jpg' %}" alt="pizza">
+                </div>
+
+            <div class='burgers-items'>
+                <div class='burger-item'>
+                    <img class="burger" src="{% static 'main/images/hamburger.jpg' %}" alt="hamburger">
+                        <div class='burger-text'>
+                            Hamburger maxi -------------- 49 $
+                        </div>
+                </div>
+
+                <div class='burger-item'>
+                    <img class="burger" src="{% static 'main/images/hamburger.jpg' %}" alt="hamburger">
+                    <div class='burger-text'>
+                        Hamburger -------------- 39 $
+                    </div>
+                </div>
+
+                <div class='burger-item'>
+                    <img class="burger" src="{% static 'main/images/hamburger.jpg' %}" alt="hamburger">
+                    <div class='burger-text'>
+                        Hamburger -------------- 29 $
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='menu'>
+
+    <div class='container'>
+
+        <div class='menu-title'>
+            Our Menu
+        </div>
+
+        <div class='menu-items'>
+
+            <div class='menu-item'>
+                <div class='menu-image'>
+                    <img src="{% static 'main/images/burger.png' %}" class='menu-img'>
+                    <div class='price'>
+                        <img src="{% static 'main/images/price.png' %}" class ='price-image'>
+                        <div class='price-420'>
+                            420
+                        </div>
+                    </div>
+                </div>
+
+                <div class='menu-text'>
+                    Hamburger Maxi
+                </div>
+
+                <div class='menu-subtext'>
+                    As thick as possible
+                         <br> meat layer
+                </div>
+
+                <div class='menu-button'>
+                    <a href="{% url 'order' %}" class='menu-btn'>Order</a>
+                </div>
+            </div>
+
+            <div class='menu-item'>
+                <div class='menu-image'>
+                    <img src="{% static 'main/images/burger.png' %}" class='menu-img'>
+                    <div class='price'>
+                        <img src="{% static 'main/images/price.png' %}" class ='price-image'>
+                        <div class='price-420'>
+                            420
+                        </div>
+                    </div>
+                </div>
+
+                <div class='menu-text'>
+                    Hamburger Maxi
+                </div>
+
+                <div class='menu-subtext'>
+                    As thick as possible
+                         <br> meat layer
+                </div>
+
+                <div class='menu-button'>
+                    <a href="{% url 'order' %}" class='menu-btn'>Order</a>
+                </div>
+            </div>
+
+            <div class='menu-item'>
+                <div class='menu-image'>
+                    <img src="{% static 'main/images/burger.png' %}" class='menu-img'>
+                    <div class='price'>
+                        <img src="{% static 'main/images/price.png' %}" class ='price-image'>
+                        <div class='price-420'>
+                            420
+                        </div>
+                    </div>
+                </div>
+
+                <div class='menu-text'>
+                    Hamburger Maxi
+                </div>
+
+                <div class='menu-subtext'>
+                    As thick as possible
+                         <br> meat layer
+                </div>
+
+                <div class='menu-button'>
+                    <a href="{% url 'order' %}" class='menu-btn'>Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class='coment'>
+
+    <div class='container'>
+
+        <div class='coment-text'>
+             The worst restaurant I've ever been to in my life, they're all talentless, thanks for not shitting in my plate, I remembered my home. 5 Michelin stars!!!
+        </div>
+
+        <div class='coment-image'>
+            <img src="{% static 'main/images/face.png' %}" class='coment-img'>
+        </div>
+
+        <div class='coment-type'>
+            Visitor
+        </div>
+
+        <div class='coment-name'>
+            Adam&Eva
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <img class="footer-img" src="{% static 'main/images/footer.png' %}" alt="footer-image">
+            <p class="footer-text">© 2025 TARU Restaurant. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
